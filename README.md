@@ -13,7 +13,7 @@ Implemente um projeto no qual serão inseridos números de forma ordenada, e que
  
 Analise a ordem dos números exibidos e verifique se estão na mesma forma que foram inseridos. Se a exibição foi diferente, justifique o ocorrido. 
  
-O programa desenvolvido pelo aluno e a sua justificativa deverá ser postado em um ambiente virtual. Esse programa será avaliado pelo tutor responsável pela disciplina. 
+ 
 ## Resposta:
 
 Nas estruturas de dados pedidas no enunciado temos os seguintes conceitos de ordenação:
@@ -26,7 +26,7 @@ E na Fila usamos o FIFO (First In First Out - Primeiro a entrar, Primeiro a Sair
 
 Portanto, na nossa ordem primeiro passamos por uma Lista, depois colocamos os elementos dessa Lista em ordem em uma Pilha, esvaziando a Lista e depois os colocamos em uma Fila, esvaziando a Pilha. 
 
-A impressão que vamos obter será:
+
 A ordem da lista será:
 ```
 1 2 3 4 5
@@ -34,6 +34,7 @@ A ordem da lista será:
 Ou seja, manteve a ordem de inserção e o primeiro a ser colocado também foi o primeiro a sair.
 
 Removemos os elementos da lista a partir sempre do 1º elemento, método remove(0), e a transferimos para a pilha.
+A impressão da pilha mostra que a ordem dos elementos estão na ordem inicial, isto porque a ordem de saída da lista é a mesma da entrada, ou seja, o que entra primeiro saíu primeiro porque assim o quisemos por conta do remove(index: 0), mostrado acima.
 ```
 1 2 3 4 5 
 ```
@@ -42,7 +43,7 @@ Ao retirarmos os elementos da pilha, usando o método pop(), e inserindo os elem
 ```
 5 4 3 2 1 
 ```
-Isto aconteceu porque na pilha o que entra por último, saí primeiro.
+Isto aconteceu porque na pilha o que entra por último, saí primeiro, em outras palavras, a ordem dos elementos foi invertida.
 
 
 Depois repetimos os passos 2 e 3, mas desta vez criaremos uma nova lista com os númetos de 6 a 10.
@@ -50,3 +51,14 @@ Depois repetimos os passos 2 e 3, mas desta vez criaremos uma nova lista com os 
 ```
 6 7 8 9 10
 ```
+
+Removemos os elementos da lista a partir sempre do 1º elemento, método remove(0), e a transferimos para a pilha.
+```
+6 7 8 9 10 
+```
+
+Ao retirarmos os elementos da pilha, usando o método pop(), e inserindo os elementos na fila, teremos:
+```
+5 4 3 2 1 10 9 8 7 6
+```
+Sempre lembrando que quando extraímos elementos da pilha, o último elemento a entrar é o primeiro a sair.
